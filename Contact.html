@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Mothers Pride International</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<img src="img/logo.png" alt="">
+		</div>
+        <div class="icon">
+            <h2 class="logo">Mothers Pride International</h2>
+        </div>
+
+		<ul class="navlist">
+			<li><a href="index.html">Overview</a></li>
+			<li><a href="Result.html">Result</a></li>
+			<li><a href="Contact.html">Contact</a></li>
+		</ul>
+
+		<div class="icons">
+			<a href="#"><i class='bx bx-search-alt-2'></i></a>
+			<a href="#"><i class='bx bx-cart' ></i></a>
+			<a href="#"><i class='bx bx-phone' ></i></a>
+			<div class="bx bx-menu" id="menu-icon"></div>
+		</div>
+	</header>
+
+	<form onsubmit="sendEmail(); reset(); return false;">
+        <h5>Input this Email for Authenticationbellow</h5>
+        <h5>"litmus.technology@gmail.com"</h5>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="State" placeholder="State" required>
+        <input type="text" id="LGA" placeholder="LGA" required>
+        <input type="text" id="zip" placeholder="zip code" required>
+        <input type="text" id="BStop" placeholder="Nearest Bus Stop" required>
+        <input type="text" id="phone" placeholder="WhatsApp Number" required>
+        <input type="text" id="Email" placeholder="Email ID" required>
+        <input type="email" id="email" placeholder="Authentication Email" required>
+        <textarea id="message" rows="10" placeholder="Please write your message here, not more than 10 rows."></textarea>
+        <button type="submit">submit</button>
+    </form>
+	<script>
+		function sendEmail(){
+			Email.send({
+				Host : "smtp.elasticemail.com",
+				Username : "litmus.technology@gmail.com",
+				Password : "A12542CD4AFDA2958C06D4E622A45A3E9DA4",
+				To : 'litmus.technology@gmail.com',
+				From : document.getElementById("email").value,
+				Subject : "New Delivery Form",
+				Body : "Receivers Name: "+ document.getElementById("name").value
+				+ "<br> Receivers Email: "+ document.getElementById("Email").value
+				+ "<br> WhatsApp Number: "+ document.getElementById("phone").value
+				+ "<br> State: "+ document.getElementById("State").value
+				+ "<br> LGA: "+ document.getElementById("LGA").value
+				+ "<br> Authentication: "+ document.getElementById("email").value
+				+ "<br> Detailed Delivery Address "+ document.getElementById("message").value
+			}).then(
+			message => alert("message sent succesfully")
+			);
+		}
+	
+	</script>
+
+	<div class="left">
+		<a href="#"><i class='bx bxl-twitter' ></i></a>
+		<a href="#"><i class='bx bxl-instagram' ></i></a>
+		<a href="#"><i class='bx bxl-facebook' ></i></a>
+	</div>
+
+	<div class="right">
+		<a href="#" class="scroll">Scroll Down<i class='bx bx-chevrons-down' ></i></a>
+	</div>
+
+	<!----custom js link--->
+	<script type="text/javascript" src="src/script.js"></script>
+
+</body>
+</html>
