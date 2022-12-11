@@ -136,19 +136,26 @@ section{
 }
 .home-img img{
 	max-width: 100%;
+	margin-left: -50px;
 }
 
 .main{
 	position: absolute;
-	top: 50%;
+	top: 35%;
 	left: 8%;
 	transform: translateY(-50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 2.5rem;
+	gap: 0.0.5rem;
+	font-size: large;
+	font-weight: bold;
+} 
+.main li a{
+	color: #fff;
 }
+
 .main li img{
 	width: 60px;
 	height: auto;
@@ -244,7 +251,7 @@ section{
 		text-align: center;
 	}
 	.home-img img{
-		width: 400px;
+		width: 600px;
 		height: auto;
 		max-width: 100%;
 	}
@@ -319,3 +326,43 @@ section{
 		--h1-font: 2.1rem;
 	}
 }
+form {
+
+	display: flex;
+	flex-direction: column;
+	padding: 2vw 4vw;
+	width: 100%px;
+	max-width: 4000px;
+	border-radius: 10px;
+	align-items: center;
+	margin-top: 100px;
+	
+  }
+  form input, form textarea {
+	border: 5px;
+	margin: auto;
+	padding: 20px;
+	outline: none;
+	font-size: 16px;
+	background: #e0dedf;
+	margin-top: 20px;
+  }
+  form button {
+	padding: 15px;
+	background: #e0dedf;
+	color: fff;
+	font-size: 12px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 20px auto 0;
+	border-radius: 30px;
+  }
+  form h3 {
+	color: rgb(249, 251, 252);
+	font-weight: 800;
+	margin-bottom: 20px;
+	align-items: center;
+  }
+
